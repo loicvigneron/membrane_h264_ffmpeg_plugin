@@ -17,7 +17,7 @@ UNIFEX_TERM create(UnifexEnv *env) {
   avcodec_register_all();
 #endif
   // const AVCodec *codec = avcodec_find_decoder(AV_CODEC_ID_H264);
-    const AVCodec *codec = avcodec_find_decoder_by_name("h264_v4l2m2m")
+    const AVCodec *codec = avcodec_find_decoder_by_name("h264_v4l2m2m");
 
   
   if (!codec) {
