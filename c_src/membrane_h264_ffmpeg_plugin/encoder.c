@@ -25,7 +25,7 @@ UNIFEX_TERM create(UnifexEnv *env, int width, int height, char *pix_fmt,
   avcodec_register_all();
 #endif
   // const AVCodec *codec = avcodec_find_encoder(AV_CODEC_ID_H264);
-  const AVCodec *codec = avcodec_find_encoder_by_name("h264_vaapi");
+  const AVCodec *codec = avcodec_find_encoder_by_name("h264_omx");
 
   if (!codec) {
     res = create_result_error(env, "nocodec");
