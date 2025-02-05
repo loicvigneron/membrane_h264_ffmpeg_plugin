@@ -24,7 +24,9 @@ UNIFEX_TERM create(UnifexEnv *env, int width, int height, char *pix_fmt,
 #if (LIBAVCODEC_VERSION_MAJOR < 58)
   avcodec_register_all();
 #endif
-  const AVCodec *codec = avcodec_find_encoder(AV_CODEC_ID_H264);
+  // const AVCodec *codec = avcodec_find_encoder(AV_CODEC_ID_H264);
+  const AVCodec *codec = avcodec_find_encoder_by_name("h264_v4l2m2m")
+
   if (!codec) {
     res = create_result_error(env, "nocodec");
     goto exit_create;
